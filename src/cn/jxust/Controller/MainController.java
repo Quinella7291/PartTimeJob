@@ -19,13 +19,13 @@ public class MainController {
 
     @RequestMapping("/index")
     public Message index(String type, Integer count) {
-        List<Job> jobs = service.getAll(null, 10);
+        List<Job> jobs = service.getAll(type, count);
         return new Message(0, jobs);
     }
 
     @RequestMapping("/detail/{id}")
     public Message detail(@PathVariable Integer id) {
-        Job job = service.getDetail(1);
+        Job job = service.getDetail(id);
         return new Message(0, job);
     }
 

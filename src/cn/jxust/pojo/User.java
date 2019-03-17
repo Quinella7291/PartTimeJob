@@ -1,4 +1,4 @@
-package com.horvey.pojo;
+package cn.jxust.pojo;
 
 /**
  * 用户实体类

@@ -1,8 +1,8 @@
-package com.horvey.Service.ServiceImpl;
+package cn.jxust.Service.ServiceImpl;
 
-import com.horvey.Service.MainService;
-import com.horvey.pojo.Job;
-import com.horvey.pojo.User;
+import cn.jxust.Service.MainService;
+import cn.jxust.pojo.Job;
+import cn.jxust.pojo.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

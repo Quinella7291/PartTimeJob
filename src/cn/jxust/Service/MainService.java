@@ -1,7 +1,7 @@
-package com.horvey.Service;
+package cn.jxust.Service;
 
-import com.horvey.pojo.Job;
-import com.horvey.pojo.User;
+import cn.jxust.pojo.Job;
+import cn.jxust.pojo.User;
 
 import java.util.List;
 

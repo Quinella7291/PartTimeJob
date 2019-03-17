@@ -1,4 +1,4 @@
-package com.horvey.pojo;
+package cn.jxust.pojo;
 
 /**
  * 兼职信息实体类

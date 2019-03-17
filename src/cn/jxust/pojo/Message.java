@@ -1,4 +1,4 @@
-package com.horvey.pojo;
+package cn.jxust.pojo;
 
 /**
  * 消息实体类,包含错误码和实际数据

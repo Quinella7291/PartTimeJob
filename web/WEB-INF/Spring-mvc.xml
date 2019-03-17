@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!--自动扫包-->
-    <context:component-scan base-package="com.horvey.Controller"/>
+    <context:component-scan base-package="cn.jxust.Controller"/>
     <!--启用SpringMVC注解支持-->
     <mvc:annotation-driven/>
 </beans>

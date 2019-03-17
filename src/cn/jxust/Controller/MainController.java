@@ -1,9 +1,9 @@
-package com.horvey.Controller;
+package cn.jxust.Controller;
 
-import com.horvey.Service.MainService;
-import com.horvey.pojo.Job;
-import com.horvey.pojo.Message;
-import com.horvey.pojo.User;
+import cn.jxust.Service.MainService;
+import cn.jxust.pojo.Job;
+import cn.jxust.pojo.Message;
+import cn.jxust.pojo.User;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

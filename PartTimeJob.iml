@@ -13,11 +13,15 @@
     </facet>
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
+        <fileset id="web application context" name="MVC application context" removed="true">
           <file>file://$MODULE_DIR$/web/WEB-INF/Spring-core.xml</file>
         </fileset>
-        <fileset id="fileset2" name="Spring Mvc" removed="false">
-          <file>file://$MODULE_DIR$/web/WEB-INF/lib/Spring-mvc.xml</file>
+        <fileset id="web SpringMvc servlet context" name="MVC SpringMvc servlet context" removed="true">
+          <file>file://$MODULE_DIR$/web/WEB-INF/Spring-mvc.xml</file>
+        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/web/WEB-INF/Spring-core.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/Spring-mvc.xml</file>
         </fileset>
       </configuration>
     </facet>

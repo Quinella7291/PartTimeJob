@@ -3,7 +3,7 @@ package cn.jxust.pojo;
 /**
  * 用户实体类
  */
-public class User {
+public class Student {
 
     private int id;
 
@@ -15,10 +15,10 @@ public class User {
 
     private String email;   //邮箱
 
-    public User() {
+    public Student() {
     }
 
-    public User(String name, String classes, String phone, String email) {
+    public Student(String name, String classes, String phone, String email) {
         this.name = name;
         this.classes = classes;
         this.phone = phone;
@@ -67,7 +67,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Student{" +
                 "name='" + name + '\'' +
                 ", classes='" + classes + '\'' +
                 ", phone='" + phone + '\'' +

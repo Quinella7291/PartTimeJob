@@ -1,8 +1,8 @@
-package cn.jxust.Service.ServiceImpl;
+package cn.jxust.service.serviceImpl;
 
-import cn.jxust.Service.MainService;
+import cn.jxust.service.MainService;
 import cn.jxust.pojo.Job;
-import cn.jxust.pojo.User;
+import cn.jxust.pojo.Student;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -66,7 +66,7 @@ public class ServiceImpl implements MainService {
     }
 
     @Override
-    public void sendEmail(User user) {
+    public void sendEmail(Student user) {
         System.out.println("我发送邮件啦!!!");
     }
 }

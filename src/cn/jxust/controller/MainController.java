@@ -1,9 +1,10 @@
-package cn.jxust.Controller;
+package cn.jxust.controller;
 
-import cn.jxust.Service.MainService;
+import cn.jxust.service.MainService;
 import cn.jxust.pojo.Job;
 import cn.jxust.pojo.Message;
-import cn.jxust.pojo.User;
+import cn.jxust.pojo.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +15,7 @@ import java.util.List;
 @RestController
 public class MainController {
 
-    @Resource
+    @Autowired
     private MainService service;
 
     @RequestMapping("/index")
@@ -48,7 +49,7 @@ public class MainController {
     }
 
     @RequestMapping("/sendEmail")
-    public Message sendEmail(User user) {
+    public Message sendEmail(Student user) {
         service.sendEmail(user);
         return new Message(0, null);
     }

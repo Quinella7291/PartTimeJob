@@ -1,7 +1,7 @@
-package cn.jxust.Service;
+package cn.jxust.service;
 
 import cn.jxust.pojo.Job;
-import cn.jxust.pojo.User;
+import cn.jxust.pojo.Student;
 
 import java.util.List;
 
@@ -44,5 +44,5 @@ public interface MainService {
      *
      * @param user 学生填的信息
      */
-    void sendEmail(User user);
+    void sendEmail(Student user);
 }

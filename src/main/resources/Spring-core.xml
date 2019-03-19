@@ -10,15 +10,15 @@
     <context:component-scan base-package="cn.jxust.service"/>
     <context:component-scan base-package="cn.jxust.dao"/>
 
+    <!--加载jdbc相关配置-->
+    <context:property-placeholder location="classpath:db.properties"/>
 
     <!--mybatis基本配置-->
     <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/meng?useSSL=false"/>
-        <property name="user" value="root"/>
-        <!--先这样，密码后期再改，或者写入配置文件-->
-        <!--但是抽取成配置文件并不能减少代码量-->
-        <property name="password" value="root"/>
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
         <property name="maxIdleTime" value="7000"/>
         <property name="maxPoolSize" value="5000"/>
         <property name="minPoolSize" value="10"/>

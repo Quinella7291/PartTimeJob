@@ -3,12 +3,10 @@ package cn.jxust.dao;
 import cn.jxust.pojo.Teacher;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
-import org.springframework.stereotype.Repository;
 
 /**
  * 负责teacher表的CRUD
  */
-@Repository
 public interface TeacherDao {
 
     /**

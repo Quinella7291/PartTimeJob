@@ -1,14 +1,12 @@
 package cn.jxust.dao;
 
 import cn.jxust.pojo.Job;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * 负责job表的CRUD
  */
-@Repository
 public interface JobDao {
     Job getJob(int id);
 

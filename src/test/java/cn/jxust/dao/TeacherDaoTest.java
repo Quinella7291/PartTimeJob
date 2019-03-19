@@ -7,9 +7,10 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
-public class JobDaoTest extends BaseTest {
+public class TeacherDaoTest extends BaseTest {
+
     @Autowired
-    private TeacherDao dao;
+    private TeacherDao teacherDao;
 
     @Test
     public void testAddTeacher(){
@@ -19,7 +20,7 @@ public class JobDaoTest extends BaseTest {
         teacher.setPassword("qweqe");
         teacher.setPhone("123123");
 
-        boolean b = dao.addTeacher(teacher);
+        boolean b = teacherDao.addTeacher(teacher);
         Assert.assertTrue(b);
     }
 }

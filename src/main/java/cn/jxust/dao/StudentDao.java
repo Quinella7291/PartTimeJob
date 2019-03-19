@@ -1,6 +1,7 @@
 package cn.jxust.dao;
 
 import cn.jxust.pojo.Student;
+import org.springframework.stereotype.Repository;
 
 /**
  * 负责student表的CRUD
@@ -8,6 +9,7 @@ import cn.jxust.pojo.Student;
  * 如果数据库出错，会直接抛出异常，一般没有返回false的机会
  * service可以选择性的判断boolean返回值
  */
+@Repository
 public interface StudentDao {
     /**
      * 添加学生

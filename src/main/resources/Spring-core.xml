@@ -8,4 +8,32 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
     <!--自动扫包-->
     <context:component-scan base-package="cn.jxust.service"/>
+    <context:component-scan base-package="cn.jxust.dao"/>
+
+
+    <!--mybatis基本配置-->
+    <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/meng?useSSL=false"/>
+        <property name="user" value="root"/>
+        <!--先这样，密码后期再改，或者写入配置文件-->
+        <!--但是抽取成配置文件并不能减少代码量-->
+        <property name="password" value="root"/>
+        <property name="maxIdleTime" value="7000"/>
+        <property name="maxPoolSize" value="5000"/>
+        <property name="minPoolSize" value="10"/>
+        <property name="initialPoolSize" value="10"/>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--如果前端选择分页，这里还要加载一个mybatis_config.xml-->
+         <property name="dataSource" ref="datasource"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--如果业务要用到动态sql，那么mapper.xml也放在这个包下，他会自动扫描-->
+        <!--最好使用注解配置，简单一点-->
+        <property name="basePackage" value="cn.jxust.dao"/>
+    </bean>
 </beans>

@@ -1,10 +1,14 @@
 package cn.jxust.dao;
 
 import cn.jxust.pojo.Teacher;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Options;
+import org.springframework.stereotype.Repository;
 
 /**
  * 负责teacher表的CRUD
  */
+@Repository
 public interface TeacherDao {
 
     /**
@@ -12,9 +16,10 @@ public interface TeacherDao {
      *
      * @param teacher teacher
      * @return 添加成功返回true
-     * @throws Exception 添加失败抛出合适的异常
      */
-    boolean addTeacher(Teacher teacher) throws Exception;
+    @Insert("insert into teacher (teacher_name, teacher_phone, password, email) VALUES (#{name},#{phone},#{password},#{email})")
+    @Options(useGeneratedKeys = true)
+    boolean addTeacher(Teacher teacher);
 
     /**
      * 根据id获取老师信息
@@ -29,7 +34,6 @@ public interface TeacherDao {
      *
      * @param newTeacher 新的老师信息
      * @return 成功返回true，失败返回false
-     * @throws Exception 修改失败抛出合适的异常
      */
-    boolean alterTheacher(Teacher newTeacher) throws Exception;
+    boolean alterTheacher(Teacher newTeacher);
 }

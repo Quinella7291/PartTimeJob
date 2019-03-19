@@ -11,6 +11,7 @@ import cn.jxust.pojo.Student;
 public interface StudentDao {
     /**
      * 添加学生
+     *
      * @param student 学生，不必包含id
      * @return 成功返回true，失败返回false
      */
@@ -18,6 +19,7 @@ public interface StudentDao {
 
     /**
      * 根据id获取学生
+     *
      * @param id 微信id
      * @return 学生资料，如果不存在可以返回null
      */
@@ -25,6 +27,7 @@ public interface StudentDao {
 
     /**
      * 修改学生id
+     *
      * @param newStudent 新的学生信息
      */
     boolean alterStudent(Student newStudent);

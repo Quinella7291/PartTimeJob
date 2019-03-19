@@ -6,7 +6,7 @@
     <!--配置Spring配置文件位置-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>WEB-INF/Spring-core.xml</param-value>
+        <param-value>classpath:Spring-core.xml</param-value>
     </context-param>
     <!--启动Spring的监听器-->
     <listener>
@@ -18,7 +18,7 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>WEB-INF/Spring-mvc.xml</param-value>
+            <param-value>classpath:Spring-mvc.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

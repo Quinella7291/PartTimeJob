@@ -27,7 +27,8 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!--如果前端选择分页，这里还要加载一个mybatis_config.xml-->
-         <property name="dataSource" ref="datasource"/>
+        <property name="configLocation" value="classpath:mybatis_config.xml"/>
+        <property name="dataSource" ref="datasource"/>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

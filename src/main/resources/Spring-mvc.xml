@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!--自动扫包-->
-    <context:component-scan base-package="cn.jxust.controller"/>
+    <context:component-scan base-package="cn.jxust.parttimejob.controller"/>
     <!--启用SpringMVC注解支持-->
     <mvc:annotation-driven/>
 </beans>

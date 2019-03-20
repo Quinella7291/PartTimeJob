@@ -1,6 +1,6 @@
-package cn.jxust.dao;
+package cn.jxust.parttimejob.dao;
 
-import cn.jxust.pojo.Job;
+import cn.jxust.parttimejob.pojo.Job;
 
 import java.util.List;
 

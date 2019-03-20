@@ -1,4 +1,4 @@
-package cn.jxust.pojo;
+package cn.jxust.parttimejob.pojo;
 
 /**
  * 消息实体类,包含错误码和实际数据
@@ -31,11 +31,4 @@ public class Message {
         this.data = data;
     }
 
-    @Override
-    public String toString() {
-        return "Message{" +
-                "code=" + code +
-                ", data=" + data +
-                '}';
-    }
 }

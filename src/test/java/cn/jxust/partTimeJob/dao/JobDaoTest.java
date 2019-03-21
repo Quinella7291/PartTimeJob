@@ -4,6 +4,7 @@ import cn.jxust.partTimeJob.pojo.Job;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -23,12 +24,14 @@ public class JobDaoTest extends BaseTest {
         job.setAddress("江西理工大学");
         job.setDetail("详细信息");
         job.setEmail("2231231@qq.com");
-        job.setIsShow(1);
         job.setJobName("搬砖测试");
         job.setName("山水");
-        job.setPostTime("1998.9.8");
+        job.setPostTime(new Date().toLocaleString());
         job.setJobType("type1");
         job.setPhone("15607003550");
+        jobDao.addJob(job);
+        jobDao.addJob(job);
+        jobDao.addJob(job);
         jobDao.addJob(job);
     }
     @Test

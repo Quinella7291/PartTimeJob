@@ -2,12 +2,9 @@ package cn.jxust.partTimeJob.dao;
 
 import cn.jxust.partTimeJob.pojo.Job;
 import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-//这个注解别给我去掉了
-@Repository
 public interface JobDao {
 
     /**
@@ -23,8 +20,8 @@ public interface JobDao {
      * @return 返回受影响的行数，默认返回1
      */
     @Insert("INSERT INTO job " +
-            "(jobName,detail,address,postTime,jobType,name,phone,email,isShow) " +
-            "VALUES (#{jobName},#{detail},#{address},#{postTime},#{jobType},#{name},#{phone},#{email},#{isShow})")
+            "(jobName,detail,address,postTime,jobType,name,phone,email) " +
+            "VALUES (#{jobName},#{detail},#{address},#{postTime},#{jobType},#{name},#{phone},#{email})")
     @Options(useGeneratedKeys = true)
     int addJob(Job job);
 

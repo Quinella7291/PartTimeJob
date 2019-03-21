@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.jxust.partTimeJob.dao.JobDao">
-    <select id="getAllJobByType" resultType="cn.jxust.partTimeJob.pojo.Job">
+    <select id="getAllJobByType" resultType="Job">
         <bind name="type_condition" value="type"/>
         SELECT * FROM job WHERE isShow=1
         <if test="type_condition != null">
@@ -12,7 +12,7 @@
         </if>
     </select>
 
-    <select id="getAllBriefJobByType" resultType="cn.jxust.partTimeJob.pojo.Job">
+    <select id="getAllBriefJobByType" resultType="Job">
         <bind name="type_condition" value="type"/>
         SELECT id,jobName,address,postTime,jobType,name,phone,email,isShow FROM job WHERE isShow=1
         <if test="type_condition!=null">
@@ -21,7 +21,7 @@
     </select>
 
     <!--分页sql-->
-    <select id="getPagesBriefJob" resultType="cn.jxust.partTimeJob.pojo.Job">
+    <select id="getPagesBriefJob" resultType="Job">
         select id,jobName,address,postTime,jobType,name,phone,email,isShow from job WHERE isShow=1
     </select>
 </mapper>

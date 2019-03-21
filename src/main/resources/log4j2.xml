@@ -18,7 +18,8 @@
         <!--mybatis打印sql到控制台和文件-->
         <Logger name="cn.jxust.partTimeJob.dao" level="TRACE" additivity="false">
             <AppenderRef ref="console"/>
-            <AppenderRef ref="daoLogFile"/>
+            <!--上线时再配置打印log到文件-->
+            <!--<AppenderRef ref="daoLogFile"/>-->
         </Logger>
     </Loggers>
 </Configuration>

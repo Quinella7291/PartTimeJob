@@ -26,14 +26,14 @@ USE meng;
 # );
 
 CREATE TABLE IF NOT EXISTS job(
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  jobName VARCHAR(30),
-  detail TEXT,
-  address VARCHAR(50),
-  postTime DATETIME,
-  jobType VARCHAR(20),
-  name VARCHAR(10),
-  phone VARCHAR(12),
-  email VARCHAR(30),
-  is_show INT
+                                id       INT PRIMARY KEY AUTO_INCREMENT,
+                                jobName  VARCHAR(30) NOT NULL,
+                                detail   TEXT        NOT NULL,
+                                address  VARCHAR(50) NOT NULL,
+                                postTime varchar(20) NOT NULL,
+                                jobType  VARCHAR(20) NOT NULL,
+                                name     VARCHAR(10) NOT NULL,
+                                phone    VARCHAR(13) NOT NULL,
+                                email    VARCHAR(30) NOT NULL,
+                                isShow   TINYINT default 1
 );

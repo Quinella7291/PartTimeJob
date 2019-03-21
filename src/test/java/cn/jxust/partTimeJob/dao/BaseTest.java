@@ -1,4 +1,4 @@
-package cn.jxust.parttimejob.dao;
+package cn.jxust.partTimeJob.dao;
 
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;

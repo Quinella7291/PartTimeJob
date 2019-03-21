@@ -1,8 +1,8 @@
-package cn.jxust.parttimejob.service.serviceImpl;
+package cn.jxust.partTimeJob.service.serviceImpl;
 
-import cn.jxust.parttimejob.pojo.Job;
-import cn.jxust.parttimejob.pojo.StudentInfo;
-import cn.jxust.parttimejob.service.JobService;
+import cn.jxust.partTimeJob.pojo.Job;
+import cn.jxust.partTimeJob.pojo.StudentInfo;
+import cn.jxust.partTimeJob.service.JobService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

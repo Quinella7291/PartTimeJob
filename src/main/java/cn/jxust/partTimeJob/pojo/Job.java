@@ -1,4 +1,4 @@
-package cn.jxust.parttimejob.pojo;
+package cn.jxust.partTimeJob.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -19,7 +19,7 @@ public class Job {
 
     private String postTime; //发布时间
 
-    private String jobtype; //兼职类型
+    private String jobType; //兼职类型
 
     private String name; //联系人名字
 
@@ -70,12 +70,12 @@ public class Job {
         this.postTime = postTime;
     }
 
-    public String getJobtype() {
-        return jobtype;
+    public String getJobType() {
+        return jobType;
     }
 
-    public void setJobtype(String jobtype) {
-        this.jobtype = jobtype;
+    public void setJobType(String jobType) {
+        this.jobType = jobType;
     }
 
     public String getName() {
@@ -108,5 +108,21 @@ public class Job {
 
     public void setIsShow(int isShow) {
         this.isShow = isShow;
+    }
+
+    @Override
+    public String toString() {
+        return "Job{" +
+                "id=" + id +
+                ", jobName='" + jobName + '\'' +
+                ", detail='" + detail + '\'' +
+                ", address='" + address + '\'' +
+                ", postTime='" + postTime + '\'' +
+                ", jobType='" + jobType + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", isShow=" + isShow +
+                '}';
     }
 }

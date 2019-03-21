@@ -1,4 +1,4 @@
-package cn.jxust.parttimejob.pojo;
+package cn.jxust.partTimeJob.pojo;
 
 /**
  * 消息实体类,包含错误码和实际数据

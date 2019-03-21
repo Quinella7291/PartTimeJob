@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.jxust.partTimeJob.dao.JobDao">
+    <select id="getAllJobByType" resultType="cn.jxust.partTimeJob.pojo.Job">
+        <bind name="type_condition" value="type"/>
+        SELECT * FROM job WHERE isShow=1
+        <if test="type_condition != null">
+           AND jobType=#{type}
+        </if>
+    </select>
+
+    <select id="getAllBriefJobByType" resultType="cn.jxust.partTimeJob.pojo.Job">
+        <bind name="type_condition" value="type"/>
+        SELECT id,jobName,address,postTime,jobType,name,phone,email,isShow FROM job WHERE isShow=1
+        <if test="type_condition!=null">
+            AND jobType=#{type}
+        </if>
+    </select>
+
+    <!--分页sql-->
+    <select id="getPagesBriefJob" resultType="cn.jxust.partTimeJob.pojo.Job">
+        select id,jobName,address,postTime,jobType,name,phone,email,isShow from job WHERE isShow=1
+    </select>
+</mapper>

@@ -1,4 +1,4 @@
-package cn.jxust.parttimejob.pojo;
+package cn.jxust.partTimeJob.pojo;
 
 /**
  * 报名信息实体类

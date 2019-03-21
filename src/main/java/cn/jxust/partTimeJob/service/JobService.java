@@ -1,7 +1,7 @@
-package cn.jxust.parttimejob.service;
+package cn.jxust.partTimeJob.service;
 
-import cn.jxust.parttimejob.pojo.Job;
-import cn.jxust.parttimejob.pojo.StudentInfo;
+import cn.jxust.partTimeJob.pojo.Job;
+import cn.jxust.partTimeJob.pojo.StudentInfo;
 
 import java.util.List;
 

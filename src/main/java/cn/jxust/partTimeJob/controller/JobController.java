@@ -1,9 +1,9 @@
-package cn.jxust.parttimejob.controller;
+package cn.jxust.partTimeJob.controller;
 
-import cn.jxust.parttimejob.pojo.Job;
-import cn.jxust.parttimejob.pojo.Message;
-import cn.jxust.parttimejob.pojo.StudentInfo;
-import cn.jxust.parttimejob.service.JobService;
+import cn.jxust.partTimeJob.pojo.Job;
+import cn.jxust.partTimeJob.pojo.Message;
+import cn.jxust.partTimeJob.pojo.StudentInfo;
+import cn.jxust.partTimeJob.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

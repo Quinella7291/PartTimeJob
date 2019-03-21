@@ -1,10 +1,7 @@
 package cn.jxust.partTimeJob.dao;
 
 import cn.jxust.partTimeJob.pojo.Job;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -62,4 +59,12 @@ public interface JobDao {
      */
     @Select("SELECT * FROM job WHERE isShow=1")
     List<Job> getAllJob();
+
+    /**
+     * 删除职位
+     * @param id id
+     * @return 返回影响的函数，默认返回1
+     */
+    @Update("UPDATE job SET isShow=0 WHERE id=#{id}")
+    int deleteJob(int id);
 }

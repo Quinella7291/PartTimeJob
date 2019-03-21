@@ -60,4 +60,10 @@ public class JobDaoTest extends BaseTest {
         List<Job> jobs = jobDao.getAllJobByType("type1");
         for(Job job:jobs) System.out.println(job);
     }
+
+    @Test
+    public void deleteJob(){
+        int i = jobDao.deleteJob(1);
+        System.out.println(i);
+    }
 }

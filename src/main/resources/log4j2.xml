@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--log4j2 简单配置-->
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %l %msg%n"/>
+        </Console>
+        <!--部署时应该改为相对路径-->
+        <File name="daoLogFile" fileName="D:/log/daoLog.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %l %msg%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="console"/>
+        </Root>
+        <!--mybatis打印sql到控制台和文件-->
+        <Logger name="cn.jxust.partTimeJob.dao" level="TRACE" additivity="false">
+            <AppenderRef ref="console"/>
+            <!--上线时再配置打印log到文件-->
+            <!--<AppenderRef ref="daoLogFile"/>-->
+        </Logger>
+    </Loggers>
+</Configuration>
